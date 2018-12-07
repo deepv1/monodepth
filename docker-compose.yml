@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  images:
+    build: .
+    volumes:
+      - ../images:/app/images
+      - ./models/:/app/models
+    environment:
+      - FILEPATH=/app/images/DSC_2482.jpg
+      - MODEL=~/models/model_kitti/model_kitti
